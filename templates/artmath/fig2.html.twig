@@ -3,12 +3,8 @@
 {% block title %}Art mathématique{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Home</a>
@@ -19,12 +15,12 @@
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Artmath
+          <a class="nav-link active" href="/artmath">Artmath
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/fig2">Nees_carres</a>
+          <a class="nav-link" href="#">Nees_carres</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
@@ -47,22 +43,28 @@
   </div>
 </nav>
 
-<div class="example-wrapper" id="#">
+<div id="#">
+    <h1>Programme Python nees_carre.py</h1>
     <h1>Paramètres :</h1>
     <!-- C'est grâce à l'attribut name que l'on peut récupérer la valeur associée dans symfony -->
-    <form method="post" action="/calculer">
+    <form method="post" action="/calculer_nees">
         <div>
-            <label for="Dimension" class="form-label">Dimension</label>
-                <input type="range" class="form-range" min="0" max="6" step="1" id="dimension" name="dimension">
+            <label for="Hasard" class="form-label">Amplitude du hasard entre 0 et 1</label>
+                <input type="range" class="form-range" min="0" max="1" step="0.01" id="dimension_ama" name="dimension_ama">
+            <label for="Harsardangle" class="form-label">Amplitude des rotations entre 0 et 1</label>
+                <input type="range" class="form-range" min="0" max="1" step="0.01" id="dimension_amr" name="dimension_amr">
+            <label for="nombreligne" class="form-label">Nombre de lignes entre 0 et 50</label>
+                <input type="range" class="form-range" min="0" max="50" step="1" id="dimension_nbc" name="dimension_nbc">
+            <label for="nombreligne" class="form-label">Nombre de colonnes entre 0 et 50</label>
+                <input type="range" class="form-range" min="0" max="50" step="1" id="dimension_nbl" name="dimension_nbl">
         </div>
         <div>
-            <button type="submit" class="btn btn-primary" name="calculer" value="1">Calculer</button>
-            <button type="submit" class="btn btn-danger" name="imprimer" value="1">Imprimer</button>
+            <button type="submit" class="btn btn-primary" name="calculer_nees" value="1">Calculer</button>
+            <button type="submit" class="btn btn-danger" name="imprimer_nees" value="1">Imprimer</button>
         </div>
     </form>
 
     <h1> Résultat : </h1>
-    <img src="{{fichier}}" width="100%">
-
+    <img src="{{fichier_nees}}" width="100%">
 </div>
 {% endblock %}

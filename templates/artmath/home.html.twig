@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art mathématique{% endblock %}
+
+{% block body %}
+<style>
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/artmath">Artmath
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/fig2">Nees carres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/carres_latins">Carré Latins</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+<div class="container">
+  <div class="card-deck row justify-content-center">
+    <div class="card col-md-4 col-lg-4 mb-5">
+      <img class="card-img-top" src="reponse.svg" alt="kosh">
+      <div class="card-body">
+        <h5 class="card-title">Koch</h5>
+          <form>
+          <a href="/artmath">
+        <input type="button" value="J'y vais !">
+          </a>
+        </form>
+        <p class="card-text">Permet d'ouvrir la page pour générer l'oeuvre de Koch</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card col-md-4 col-lg-4 mb-5">
+      <img class="card-img-top" src="nees_carre_image.png" alt="nees_carre">
+      <div class="card-body">
+        <h5 class="card-title">Nees_carres</h5>
+        <p class="card-text">
+        <form>
+          <a href="/fig2">
+        <input type="button" value="J'y vais !">
+          </a>
+        </form>
+        <p class="card-text">Permet d'ouvrir la page pour générer l'oeuvre nees_carre</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card col-md-4 col-lg-4 mb-5">
+      <img class="card-img-top" src="carre_latin.jpg" alt="Carres Latins">
+      <div class="card-body">
+        <h5 class="card-title">Carrés Latins</h5>
+        <p class="card-text">Permet d'ouvrir la page pour générer l'oeuvre des Carrés Latins</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
