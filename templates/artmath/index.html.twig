@@ -54,7 +54,7 @@
         <div>
             <label for="Dimension" class="form-label">Dimension</label>
                 <input type="range" class="form-range" min="0" max="6" step="1" id="dimension" name="dimension">
-                <p>Valeur: <span id="demo"></span></p>
+                <p>Valeur: <span id="val_dim"></span></p>
         </div>
         <div>
             <button type="submit" class="btn btn-primary" name="calculer" value="1">Calculer</button>
@@ -68,7 +68,7 @@
 </div>
 <script>
 var slider = document.getElementById("dimension");
-var output = document.getElementById("demo");
+var output = document.getElementById("val_dim");
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
