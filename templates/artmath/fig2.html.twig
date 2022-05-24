@@ -65,21 +65,27 @@
 var slider = document.getElementById("dimension_ama");
 var output = document.getElementById("val_dim_ama");
 output.innerHTML = slider.value;
-var slider = document.getElementById("dimension_amr");
-var output = document.getElementById("val_dim_amr");
-output2.innerHTML = slider.value;
-var slider = document.getElementById("dimension_nbc");
-var output = document.getElementById("val_dim_nbc");
-output3.innerHTML = slider.value;
-var slider = document.getElementById("dimension_nbl");
-var output = document.getElementById("val_dim_nbl");
-output4.innerHTML = slider.value;
+var slider2 = document.getElementById("dimension_amr");
+var output2 = document.getElementById("val_dim_amr");
+output2.innerHTML = slider2.value;
+var slider3 = document.getElementById("dimension_nbc");
+var output3 = document.getElementById("val_dim_nbc");
+output3.innerHTML = slider3.value;
+var slider4 = document.getElementById("dimension_nbl");
+var output4 = document.getElementById("val_dim_nbl");
+output4.innerHTML = slider4.value;
 
 
 slider.oninput = function() {
   output.innerHTML = this.value;
+}
+slider2.oninput = function() {
   output2.innerHTML = this.value;
+}
+slider3.oninput = function() {
   output3.innerHTML = this.value;
+}
+slider4.oninput = function() {
   output4.innerHTML = this.value;
 }
 
