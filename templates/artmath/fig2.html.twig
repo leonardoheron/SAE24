@@ -39,18 +39,14 @@
     <!-- C'est grâce à l'attribut name que l'on peut récupérer la valeur associée dans symfony -->
     <form method="post" action="/calculer_nees">
         <div>
-            <label for="Hasard" class="form-label">Amplitude du hasard entre 0 et 1</label>
+            <label for="Hasard" class="form-label">Amplitude du hasard entre 0 et 1</label><p>Valeur: <span id="val_dim_ama"></span></p>
                 <input type="range" class="form-range" min="0" max="1" step="0.01" id="dimension_ama" name="dimension_ama">
-                <p>Valeur: <span id="val_dim_ama"></span></p>
-            <label for="Harsardangle" class="form-label">Amplitude des rotations entre 0 et 1</label>
+            <label for="Harsardangle" class="form-label">Amplitude des rotations entre 0 et 1</label><p>Valeur: <span id="val_dim_amr"></span></p>
                 <input type="range" class="form-range" min="0" max="1" step="0.01" id="dimension_amr" name="dimension_amr">
-                <p>Valeur: <span id="val_dim_amr"></span></p>
-            <label for="nombreligne" class="form-label">Nombre de lignes entre 0 et 50</label>
+            <label for="nombreligne" class="form-label">Nombre de lignes entre 0 et 50</label><p>Valeur: <span id="val_dim_nbc"></span></p>
                 <input type="range" class="form-range" min="1" max="50" step="1" id="dimension_nbc" name="dimension_nbc">
-                <p>Valeur: <span id="val_dim_nbc"></span></p>
-            <label for="nombreligne" class="form-label">Nombre de colonnes entre 0 et 50</label>
+            <label for="nombreligne" class="form-label">Nombre de colonnes entre 0 et 50</label><p>Valeur: <span id="val_dim_nbl"></span></p>
                 <input type="range" class="form-range" min="1" max="50" step="1" id="dimension_nbl" name="dimension_nbl">
-                <p>Valeur: <span id="val_dim_nbl"></span></p>
         </div>
         <div>
             <button type="submit" class="btn btn-primary" name="calculer_nees" value="1">Calculer</button>
