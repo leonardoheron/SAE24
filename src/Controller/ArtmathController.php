@@ -144,7 +144,7 @@ class ArtmathController extends AbstractController
     public function carre_latin(Request $request): Response
     {
         // Pour les boutons : si appui contenu champ value sinon NULL
-        $oeuvre  = $_POST['oeuvre'];
+        $oeuvre  = $_POST['carre_latin'];
 
 
         // Oui : Appelle le script Python koch.py qui se trouve dans le répertoire /public
