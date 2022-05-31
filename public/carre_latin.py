@@ -82,12 +82,7 @@ def affiche_carre_latin(dico_possibilite,dico_coord,dico_possibilite2):
     # Enregistre la figure
     fichier='oeuvre.png'
     pygame.image.save(screen,fichier)
-    while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-        pygame.display.flip()
+
 
 
 
