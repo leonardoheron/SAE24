@@ -151,7 +151,7 @@ class ArtmathController extends AbstractController
         $process_carre_latin = new Process(['python3',"carre_latin.py"]);
         $process_carre_latin -> run();
         // Récupère la valeur de retour renvoyé par le script python
-        $fichier_nees="reponse.png";
+        $fichier_nees="oeuvre.png";
 
         // Retourne un message si l'éxécution c'est mal passée
         if (!$process_carre_latin->isSuccessful())
