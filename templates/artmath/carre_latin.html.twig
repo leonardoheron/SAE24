@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art mathématique{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/artmath">Koch
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nees_carres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Carres Latins</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="SAE24_compte_rendu_final.pdf">Mon compte rendu</a>
+        </li>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="#">
+    <h1>Programme Python nees_carre.py</h1>
+    <h1>Paramètres :</h1>
+    <!-- C'est grâce à l'attribut name que l'on peut récupérer la valeur associée dans symfony -->
+    <form method="post" action="/carre_latin">
+        <div>
+            <button type="submit" class="btn btn-primary" name="carre_latin" value="1">Afficher l'oeuvre</button>
+        </div>
+    </form>
+
+    <h1> Résultat : </h1>
+    <img src="{{oeuvre}}" width="100%">
+</div>
+{% endblock %}

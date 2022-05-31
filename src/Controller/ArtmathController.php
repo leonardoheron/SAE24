@@ -128,4 +128,35 @@ class ArtmathController extends AbstractController
             ]);
         }
     }
+    /**
+     * @Route("/carre_latin", name="calculer_nees")
+     */
+    public function carre_latin(Request $request): Response
+    {
+        // Pour les boutons : si appui contenu champ value sinon NULL
+        $oeuvre  = $_POST['oeuvre'];
+
+
+        // Oui : Appelle le script Python koch.py qui se trouve dans le répertoire /public
+        $process_carre_latin = new Process(['python3',"carre_latin.py"]);
+        $process_carre_latin -> run();
+        // Récupère la valeur de retour renvoyé par le script python
+        $fichier_nees="reponse.png";
+
+        // Retourne un message si l'éxécution c'est mal passée
+        if (!$process_carre_latin->isSuccessful())
+            return new Response ("Erreur lors de l'éxécution du script Python :<br>".$process_carre_latin->getErrorOutput());    
+
+        // A t'on appuyé sur calculer ?
+        if ($calculer_nees!=NULL)
+            return $this->render('artmath/carre_latin.html.twig', [
+                'oeuvre' => $fichier_nees,
+            ]);
+        else {
+            // On a appuyé sur imprimer
+            return $this->render('artmath/carre_latin.html.twig', [
+                'oeuvre' => $fichier_nees,
+            ]);
+        }
+    }
 }
