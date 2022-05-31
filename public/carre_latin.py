@@ -3,7 +3,7 @@ import sys
 import random
 width = 780
 height = 1020
-screen = pygame.surface.Surface((larg,haut))
+screen = pygame.surface.Surface((width,height))
 screen_color = (204, 221, 255)
 screen.fill(screen_color)
 def fig(matrice,ech,x0,y0):
