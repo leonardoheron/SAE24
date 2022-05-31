@@ -58,6 +58,16 @@ class ArtmathController extends AbstractController
             'fichier_nees' => '',
         ]);
     }
+    /**
+     * @Route("/fig3", name="app_fig3")
+     */
+    public function fig3(): Response
+    {
+        return $this->render('artmath/carre_latin.html.twig', [
+            'oeuvre' => '',
+        ]);
+    }
+
 
     /**
      * @Route("/calculer", name="calculer")
