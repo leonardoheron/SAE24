@@ -158,7 +158,7 @@ class ArtmathController extends AbstractController
             return new Response ("Erreur lors de l'éxécution du script Python :<br>".$process_carre_latin->getErrorOutput());    
 
         // A t'on appuyé sur calculer ?
-        if ($calculer_nees!=NULL)
+        if ($oeuvre!=NULL)
             return $this->render('artmath/carre_latin.html.twig', [
                 'oeuvre' => $fichier_nees,
             ]);
