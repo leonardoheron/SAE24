@@ -101,7 +101,7 @@ class ArtmathController extends AbstractController
             ]);
         }
     }
-    
+
     /**
      * @Route("/calculer_nees", name="calculer_nees")
      */
@@ -140,7 +140,7 @@ class ArtmathController extends AbstractController
         }
     }
     /**
-     * @Route("/carre_latin", name="calculer_nees")
+     * @Route("/carre_latin", name="carre_latin")
      */
     public function carre_latin(Request $request): Response
     {
