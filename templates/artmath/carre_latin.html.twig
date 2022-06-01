@@ -34,14 +34,24 @@
 </nav>
 
 <div id="#">
-    <h1>Programme Python nees_carre.py</h1>
+    <h1>Programme Python carres_latins.py</h1>
     <h1>Paramètres :</h1>
     <!-- C'est grâce à l'attribut name que l'on peut récupérer la valeur associée dans symfony -->
     <form method="post" action="/carre_latin">
+      <fieldset>
+      <legend>dsa2ex1q3_rep</legend>
+      <div class="form-group">
+        <label for="ech_lab">Echelle</label>
+		    <input type="text" name="ech" class="form-control" id="ech1" placeholder="Echelle">
+        <label for="background">Couleur de fond</label>
+        <input type="color" id="color1" name="Couleur de fond" value="#e66465">
         <div>
             <button type="submit" class="btn btn-primary" name="carre_latin" value="1">Afficher l'oeuvre</button>
         </div>
+      </div>
+      </fieldset>
     </form>
+
 
     <h1> Résultat : </h1>
     <img src="{{ oeuvre }}" width="100%">
