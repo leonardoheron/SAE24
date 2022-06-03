@@ -30,8 +30,8 @@ def start(ech,background_color):
     affiche_carre_latin(dico_possibilite, dico_coord, dico_possibilite2)
     
 def fig(matrice,ech,x0,y0):
-    line_color = shape_color
-    noir = shape_color
+    line_color = hex_to_rgb(shape_color)
+    noir = hex_to_rgb(shape_color)
     for i in range(len(matrice)):
         for j in range(len(matrice[i])):
             if matrice[i][j] == "A":
