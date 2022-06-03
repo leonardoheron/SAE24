@@ -1,28 +1,11 @@
 import pygame
 import sys
 import random
-
-# ech permet de modifier l'echelle de la figure.
-ech=int(sys.argv[1])
-# color_background permet de récupérer la couleur du fond.
-color_background=tuple(sys.argv[2])
-
-#permet de démarrer le script.
-start(60,(255,0,0))
-
-
-
-def start(ech,background_color):
-    dico_possibilite = {1:['A','B','C'],2:['A','C','B'],3:['B','A','C'],4:['B','C','A'],5:['C','A','B'],6:['C','B','A']}
-    dico_possibilite2 ={7:['A','B','C'],8:['A','C','B'],9:['B','A','C'],10:['B','C','A'],11:['C','A','B'],12:['C','B','A']}
-    dico_coord = {1:(0,0),2:(240,0),3:(480,0),4:(0,240),5:(240,240),6:(480,240),7:(0,480),8:(240,480),9:(480,480),10:(0,720),11:(240,720),12:(480,720)}
-    global width,height,screen
-    width = ech*13
-    height = 17*ech
-    screen = pygame.display.set_mode((width, height))
-    screen.fill(background_color)
-    affiche_carre_latin(dico_possibilite, dico_coord, dico_possibilite2)
-    
+width = 780
+height = 1020
+screen = pygame.surface.Surface((width,height))
+screen_color = (204, 221, 255)
+screen.fill(screen_color)
 def fig(matrice,ech,x0,y0):
     line_color = (0, 0, 0)
     noir = (0,0,0,255)
@@ -103,7 +86,10 @@ def affiche_carre_latin(dico_possibilite,dico_coord,dico_possibilite2):
 
 
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
+    dico_possibilite = {1:['A','B','C'],2:['A','C','B'],3:['B','A','C'],4:['B','C','A'],5:['C','A','B'],6:['C','B','A']}
+    dico_possibilite2 ={7:['A','B','C'],8:['A','C','B'],9:['B','A','C'],10:['B','C','A'],11:['C','A','B'],12:['C','B','A']}
+    dico_coord = {1:(0,0),2:(240,0),3:(480,0),4:(0,240),5:(240,240),6:(480,240),7:(0,480),8:(240,480),9:(480,480),10:(0,720),11:(240,720),12:(480,720)}
+    affiche_carre_latin(dico_possibilite, dico_coord, dico_possibilite2)
     
-    #(204, 221, 255)
     #total_matrice()
