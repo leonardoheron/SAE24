@@ -43,9 +43,15 @@
       <div class="form-group">
         <label for="ech_lab">Echelle</label><p>Valeur: <span id="val_ech"></span></p>
         <input type="range" class="form-range" min="60" max="200" step="10" id="ech" name="ech">
+        <select name="sens" id="sens">
+          <option value="0">Sens de base</option>
+          <option value="1">Sens inversé</option>
+        </select>
 		    <!--<input type="text" name="ech" class="form-control" id="ech1" placeholder="Echelle">-->
         <label for="background">Couleur de fond</label>
-        <input type="color" id="color1" name="color1" value="#e66465">
+        <input type="color" id="color1" name="color1" value="#ccddff">
+        <label for="shape_color_lab">Couleur des formes</label>
+        <input type="color" id="shape_color" name="shape_color" value="#000000">
         <div>
             <button type="submit" class="btn btn-primary" name="carre_latin" value="1">Afficher l'oeuvre</button>
         </div>

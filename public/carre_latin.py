@@ -6,6 +6,10 @@ import random
 ech=int(sys.argv[1])
 # color_background permet de récupérer la couleur du fond.
 color_background=sys.argv[2]
+# shape_color permet de changer la couleur des formes.
+shape_color=sys.argv[3]
+# sens permet de choisir entre 2 positionnement de l'oeuvre.
+sens=int(sys.argv[4])
 
 
 
@@ -26,8 +30,8 @@ def start(ech,background_color):
     affiche_carre_latin(dico_possibilite, dico_coord, dico_possibilite2)
     
 def fig(matrice,ech,x0,y0):
-    line_color = (0, 0, 0)
-    noir = (0,0,0,255)
+    line_color = shape_color
+    noir = shape_color
     for i in range(len(matrice)):
         for j in range(len(matrice[i])):
             if matrice[i][j] == "A":
@@ -88,16 +92,28 @@ def affichage_matrice(matrice):
         print(matrice[i])
         
 def affiche_carre_latin(dico_possibilite,dico_coord,dico_possibilite2):
-    for cle,val in dico_possibilite.items():
-        x,y,z = val
-        x0,y0 = dico_coord[cle]
-        matrice = carre_latin_lettre(x,y,z)
-        fig(matrice,60,x0,y0)
-    for cle,val in dico_possibilite2.items():
-        x,y,z = val
-        x0,y0 = dico_coord[cle]
-        matrice = carre_latin_lettre2(x,y,z)
-        fig(matrice,60,x0,y0)
+    if sens == 0:
+        for cle,val in dico_possibilite.items():
+            x,y,z = val
+            x0,y0 = dico_coord[cle]
+            matrice = carre_latin_lettre(x,y,z)
+            fig(matrice,ech,x0,y0)
+        for cle,val in dico_possibilite2.items():
+            x,y,z = val
+            x0,y0 = dico_coord[cle]
+            matrice = carre_latin_lettre2(x,y,z)
+            fig(matrice,ech,x0,y0)
+    else:
+        for cle,val in dico_possibilite.items():
+            x,y,z = val
+            x0,y0 = dico_coord[cle]
+            matrice = carre_latin_lettre2(x,y,z)
+            fig(matrice,ech,x0,y0)
+        for cle,val in dico_possibilite2.items():
+            x,y,z = val
+            x0,y0 = dico_coord[cle]
+            matrice = carre_latin_lettre(x,y,z)
+            fig(matrice,ech,x0,y0)
     # Enregistre la figure
     fichier='oeuvre.png'
     pygame.image.save(screen,fichier)
