@@ -18,7 +18,7 @@ def start(ech,background_color):
     global width,height,screen
     width = ech*13
     height = 17*ech
-    screen = pygame.display.set_mode((width, height))
+    screen = pygame.surface.Surface((width, height))
     screen.fill(background_color)
     affiche_carre_latin(dico_possibilite, dico_coord, dico_possibilite2)
     
