@@ -41,8 +41,9 @@
       <fieldset>
       <legend>dsa2ex1q3_rep</legend>
       <div class="form-group">
-        <label for="ech_lab">Echelle</label>
-		    <input type="text" name="ech" class="form-control" id="ech1" placeholder="Echelle">
+        <label for="ech_lab">Echelle</label><p>Valeur: <span id="val_ech"></span></p>
+        <input type="range" class="form-range" min="60" max="200" step="10" id="ech" name="ech">
+		    <!--<input type="text" name="ech" class="form-control" id="ech1" placeholder="Echelle">-->
         <label for="background">Couleur de fond</label>
         <input type="color" id="color1" name="color1" value="#e66465">
         <div>
