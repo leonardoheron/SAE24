@@ -7,8 +7,7 @@ ech=int(sys.argv[1])
 # color_background permet de récupérer la couleur du fond.
 color_background=tuple(sys.argv[2])
 
-#permet de démarrer le script.
-start(ech,color_background)
+
 
 
 
@@ -101,8 +100,8 @@ def affiche_carre_latin(dico_possibilite,dico_coord,dico_possibilite2):
     pygame.image.save(screen,fichier)
 
 
-
-
+#permet de démarrer le script.
+start(ech,color_background)
 #if __name__ == "__main__":
     
     #(204, 221, 255)
