@@ -5,7 +5,7 @@ import random
 # ech permet de modifier l'echelle de la figure.
 ech=int(sys.argv[1])
 # color_background permet de récupérer la couleur du fond.
-color_background=tuple(sys.argv[2])
+color_background=sys.argv[2]
 
 
 
