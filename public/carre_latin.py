@@ -8,7 +8,7 @@ ech=int(sys.argv[1])
 color_background=tuple(sys.argv[2])
 
 #permet de démarrer le script.
-start(60,(255,0,0))
+start(ech,color_background)
 
 
 
