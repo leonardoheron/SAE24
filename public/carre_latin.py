@@ -97,23 +97,23 @@ def affiche_carre_latin(dico_possibilite,dico_coord,dico_possibilite2):
             x,y,z = val
             x0,y0 = dico_coord[cle]
             matrice = carre_latin_lettre(x,y,z)
-            fig(matrice,ech,x0,y0)
+            fig(matrice,60,x0,y0)
         for cle,val in dico_possibilite2.items():
             x,y,z = val
             x0,y0 = dico_coord[cle]
             matrice = carre_latin_lettre2(x,y,z)
-            fig(matrice,ech,x0,y0)
+            fig(matrice,60,x0,y0)
     else:
         for cle,val in dico_possibilite.items():
             x,y,z = val
             x0,y0 = dico_coord[cle]
             matrice = carre_latin_lettre2(x,y,z)
-            fig(matrice,ech,x0,y0)
+            fig(matrice,60,x0,y0)
         for cle,val in dico_possibilite2.items():
             x,y,z = val
             x0,y0 = dico_coord[cle]
             matrice = carre_latin_lettre(x,y,z)
-            fig(matrice,ech,x0,y0)
+            fig(matrice,60,x0,y0)
     # Enregistre la figure
     fichier='oeuvre.png'
     pygame.image.save(screen,fichier)
