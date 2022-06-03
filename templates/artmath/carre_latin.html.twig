@@ -39,7 +39,7 @@
     <!-- C'est grâce à l'attribut name que l'on peut récupérer la valeur associée dans symfony -->
     <form method="post" action="/carre_latin">
       <fieldset>
-      <legend>dsa2ex1q3_rep</legend>
+      <legend>Les paramètres des carrés latins</legend>
       <div class="form-group">
         <label for="ech_lab">Echelle</label><p>Valeur: <span id="val_ech"></span></p>
         <input type="range" class="form-range" min="60" max="200" step="10" id="ech" name="ech">
@@ -63,4 +63,13 @@
     <h1> Résultat : </h1>
     <img src="{{ oeuvre }}" width="100%">
 </div>
+<script>
+var slider = document.getElementById("ech");
+var output = document.getElementById("val_ech");
+output4innerHTML = slider4value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
 {% endblock %}
