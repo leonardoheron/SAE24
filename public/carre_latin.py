@@ -9,7 +9,10 @@ color_background=tuple(sys.argv[2])
 
 
 
-
+def hex_to_rgb(value):
+    value = value.lstrip('#')
+    lv = len(value)
+    return tuple(int(value[i:i + lv // 3], 16) for i in range(0, lv, lv // 3))
 
 def start(ech,background_color):
     dico_possibilite = {1:['A','B','C'],2:['A','C','B'],3:['B','A','C'],4:['B','C','A'],5:['C','A','B'],6:['C','B','A']}
@@ -19,7 +22,7 @@ def start(ech,background_color):
     width = ech*13
     height = 17*ech
     screen = pygame.surface.Surface((width, height))
-    screen.fill(background_color)
+    screen.fill(hex_to_rgb(background_color))
     affiche_carre_latin(dico_possibilite, dico_coord, dico_possibilite2)
     
 def fig(matrice,ech,x0,y0):
